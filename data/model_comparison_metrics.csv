@@ -1,0 +1,4 @@
+Model,RMSE (CNY),MAE (CNY),MAPE (%),Target Met <8%
+ARIMA (22-day blind forecast),17.988,13.3873,4.83,True
+"Multivariate LSTM (22-day, anchored)",62.1255,49.5218,18.06,False
+Naive Persistence,19.3835,13.1671,4.7,True

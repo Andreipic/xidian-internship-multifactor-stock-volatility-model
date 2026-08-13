@@ -1,0 +1,4 @@
+Model,RMSE (CNY),MAE (CNY),MAPE (%),Target Met (<8%)
+ARIMA (22-day walk-forward),17.988,13.3873,4.83,True
+LSTM v2 (22-day cumulative),37.6405,28.1793,10.12,False
+Naive (persistence),19.3835,13.1671,4.7,True

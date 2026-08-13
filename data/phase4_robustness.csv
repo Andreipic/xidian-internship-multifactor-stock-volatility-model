@@ -1,0 +1,8 @@
+Scenario,MAPE (%),Target <8%
+Normal market,1.49,YES
+Calm regime,1.52,YES
+Volatile regime,1.46,YES
+Policy shock (full),1.53,YES
+Policy shock (post-shock),1.53,YES
+Market crash (full),1.61,YES
+Market crash (crash period),1.36,YES
