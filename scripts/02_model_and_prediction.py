@@ -38,7 +38,6 @@ warnings.filterwarnings("ignore", category=ValueWarning)
 warnings.simplefilter("ignore", category=ValueWarning)
 from scipy.stats import norm
 
-from pykalman import KalmanFilter  #  manual filter actually used 
 import pywt
 
 from sklearn.preprocessing import MinMaxScaler
