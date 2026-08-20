@@ -1,0 +1,42 @@
+Dataset: (1834, 20) (2018-06-11 to 2025-12-30)
+
+ADF on Close: stat=-1.4171, p=0.5741
+ARIMA(1,1,1): RMSE=5.96 MAE=4.47 MAPE=5.01%
+
+Feature columns (13): ['Open', 'High', 'Low', 'Volume', 'Kalman', 'Wavelet_causal', 'PBoC_LPR_1y_weekly', 'PBoC_LPR_1y_monthly', 'Copper_weekly', 'Copper_monthly', 'Brent_Oil_weekly', 'Brent_Oil_monthly', 'log_return']
+Scalers loaded from disk (matches the saved model).
+Train: (672, 60, 13), Calib: (330, 60, 13), Test: (711, 60, 13)
+
+Model loaded from /home/andrei_pic/BYD_volatility_analysis/BYD_volatility_test/models/lstm_recursive_corrected.keras -- no retraining.
+
+LSTM (raw, before bias correction): MAPE=5.19%
+Directional accuracy: 54.20%
+Diebold-Mariano vs naive: stat=-8.583, p=0.0000
+
+SHAP contribution -- LPR & commodities, by frequency:
+            feature  mean_abs_shap
+ PBoC_LPR_1y_weekly   6.378542e-06
+PBoC_LPR_1y_monthly   6.297519e-06
+     Copper_monthly   5.319239e-06
+      Copper_weekly   3.799848e-06
+  Brent_Oil_monthly   3.781860e-06
+   Brent_Oil_weekly   6.954330e-07
+MC-Dropout 80% coverage (single window): 68.2%
+MC-Dropout 95% coverage (single window): 100.0%
+
+Calibration windows: 62
+Conformal 80% global coverage (n=704): 90.3%, mean width=19.0 CNY
+Conformal 95% global coverage (n=704): 95.9%, mean width=26.2 CNY
+
+============================================================
+FINAL RESULTS (2023-2025 test set, 704 observations)
+============================================================
+Model                             RMSE       MAE    MAPE (%)
+ARIMA(1,1,1)                      5.96      4.47        5.01
+Naive (walk-forward)                                    6.78
+LSTM, recursive (raw)                                   5.19
+LSTM, bias-corrected              6.43      4.30        4.78
+
+Project target: MAPE < 8% --  PASS
+
+Done. Figures saved to /home/andrei_pic/BYD_volatility_analysis/BYD_volatility_test/figures, metrics saved to /home/andrei_pic/BYD_volatility_analysis/BYD_volatility_test/models/metrics_summary.csv

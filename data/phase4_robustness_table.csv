@@ -1,7 +1,7 @@
 Scenario,MAPE (%)
-Normal market (all),5.19
-Calm,3.47
-Normal,5.27
-Volatile,6.75
-Policy shock,6.07
-Market crash,7.23
+Normal market (all),5.29
+Calm,3.54
+Normal,5.34
+Volatile,6.89
+Policy shock,6.11
+Market crash,7.63

@@ -1,6 +1,0 @@
-Model,MAPE (%)
-Naive baseline,1.43
-ARIMA,4.77
-Random Forest,1.49
-LSTM,1.49
-Stacking Ensemble,1.51

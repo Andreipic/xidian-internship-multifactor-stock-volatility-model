@@ -1,0 +1,51 @@
+Project root: /home/andrei_pic/BYD_volatility_analysis/BYD_volatility_test
+Loaded existing dataset: (2670, 20) (2015-01-06 to 2025-12-30)
+
+Missing values:
+  [ok] Open                 0.0%
+  [ok] High                 0.0%
+  [ok] Low                  0.0%
+  [ok] Close                0.0%
+  [ok] Volume               0.0%
+  [ok] DailyReturn          0.0%
+  [ok] CNYUSD               0.0%
+  [ok] SSE_Close            0.0%
+  [ok] SSE_Return           0.0%
+  [ok] Vol_20d              0.7%
+  [ok] Vol_60d              2.2%
+  [ok] SP500                0.0%
+  [ok] VIX                  0.0%
+  [ok] Tesla                0.0%
+  [ok] Brent_Oil            0.0%
+  [ok] Copper               0.0%
+  [ok] SSE                  0.0%
+  [WARN] CATL_Close           31.3%
+  [ok] PBoC_LPR_1y          0.0%
+  [ok] Beijing_Temp_C       0.0%
+
+Skewness: 0.387 | Kurtosis (excess): 2.730
+
+ADF (levels):    stat=-0.990, p=0.7568
+ADF (1st diff):  stat=-16.078, p=0.0000
+
+Top 5 FFT spectral peaks:
+  period ~ 5.9 days, power = 13.5193
+  period ~ 2.8 days, power = 12.1922
+  period ~ 8.6 days, power = 11.5879
+  period ~ 7.6 days, power = 11.4192
+  period ~ 6.8 days, power = 11.3948
+
+Top factors correlated with BYD Close return:
+High         0.711952
+Low          0.602430
+SSE_Close    0.557574
+SSE          0.542973
+Open         0.250425
+Volume       0.216269
+Copper       0.123872
+Vol_60d      0.113057
+SP500        0.108648
+Vol_20d      0.097800
+
+Done. Dataset ready at /home/andrei_pic/BYD_volatility_analysis/BYD_volatility_test/data/byd_all_factors_dataset.csv (2670 rows, 20 columns).
+Figures saved to /home/andrei_pic/BYD_volatility_analysis/BYD_volatility_test/figures

@@ -1,4 +1,0 @@
-Regime,N_days,LSTM_MAPE,RF_MAPE,Naive_MAPE
-Calm,205,1.53,1.11,1.84
-Normal,218,1.65,1.4,2.03
-Volatile,223,1.42,1.97,1.58

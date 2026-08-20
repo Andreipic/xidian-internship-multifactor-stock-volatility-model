@@ -1,0 +1,52 @@
+Dataset: (1834, 20) (2018-06-11 to 2025-12-30)
+Calib: (330, 60, 13), Test: (708, 60, 13)
+Loaded validated model from /home/andrei_pic/BYD_volatility_analysis/BYD_volatility_test/models/lstm_recursive_corrected.keras (no retraining).
+Calibration windows: 62
+
+Regime distribution:
+Normal      247
+Volatile    234
+Calm        227
+Name: count, dtype: int64
+
+MAPE by regime:
+  Regime  N_days  LSTM_MAPE
+    Calm     223       3.54
+  Normal     247       5.34
+Volatile     234       6.89
+
+--- Stress scenarios (5 fixed anchors) ---
+Policy shock: MAPE mean=6.11% (min=1.27, max=14.14) | alert rate mean=12.7%
+Market crash: MAPE mean=7.63% (min=1.11, max=15.61) | alert rate mean=14.5%
+
+Robustness summary:
+           Scenario  MAPE (%)
+Normal market (all)      5.29
+               Calm      3.54
+             Normal      5.34
+           Volatile      6.89
+       Policy shock      6.11
+       Market crash      7.63
+
+============================================================
+PHASE 4 -- SUMMARY
+============================================================
+
+Regime MAPE:
+  Regime  N_days  LSTM_MAPE
+    Calm     223       3.54
+  Normal     247       5.34
+Volatile     234       6.89
+
+Alert rate by regime (%):
+regime
+Calm         3.1
+Normal       6.5
+Volatile    10.7
+Name: alert, dtype: float64
+
+Stress scenario alert rates: policy=12.7%, crash=14.5%
+
+All conditions stay under the project's 8% MAPE threshold: YES
+
+Figures saved to /home/andrei_pic/BYD_volatility_analysis/BYD_volatility_test/figures
