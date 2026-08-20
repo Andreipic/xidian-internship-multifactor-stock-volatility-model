@@ -9,7 +9,7 @@ Full write-up: `rapport_final_xidian.pdf` (LaTeX report, ~19 pages).
 ## Project structure
 
 The pipeline is organized into four phases, matching the report structure,
-implemented as three standalone Python scripts (`scripts/`):
+implemented as three Python scripts (`scripts/`):
 
 | Script | Report phase(s) | What it does |
 |---|---|---|
@@ -29,8 +29,8 @@ implemented as three standalone Python scripts (`scripts/`):
 └── rapport_final_xidian.pdf
 ```
 
-This repo previously stored the pipeline as three Jupyter notebooks. These
-have been converted to the three standalone scripts above; the scripts
+This repo previously stored the pipeline as four Jupyter notebooks. These
+have been converted to the three scripts above; the scripts
 contain the same logic and produce the same figures and results.
 
 ## Setup and running
@@ -49,8 +49,7 @@ If the committed data/model files are already present, each script loads
 and reproduces the report's results directly rather than re-downloading or
 retraining. Scripts 01 and 02 fall back to live data collection / training
 if those files are missing (with a printed warning that results will then
-differ slightly from the report, due to newer data and retraining
-stochasticity).
+differ slightly from the report, due to newer data and retraining).
 
 Each script writes its full console output to `logs/<script_name>.log`,
 overwritten on every run -- check there first if a number looks off or a
@@ -66,8 +65,7 @@ figure is missing.
 | LSTM, bias-corrected | **4.70–4.78** |
 
 All values meet the project's <8% MAPE constraint. The small ranges above
-reflect minor run-to-run variance (data refresh, floating-point
-nondeterminism); see `logs/` for the exact console output of the last run
+reflect minor run-to-run variance (data refresh, floating-point); see `logs/` for the exact console output of the last run
 of each script.
 
 Regime and stress-scenario MAPE (Phase 4, all under 8%):
